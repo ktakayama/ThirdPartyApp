@@ -1,16 +1,38 @@
-# third_party
+# Third Party App Simulator
 
-A new Flutter project.
+This is an app to simulate behavior when integrating with a Third Party App.
 
-## Getting Started
+To get started, assign your desired value to `URL_SCHEMES` in `setup.rb` and execute as follows:
 
-This project is a starting point for a Flutter application.
+```sh
+ruby setup.rb
+```
 
-A few resources to get you started if this is your first Flutter project:
+After running this script, build the app. It will then be set to launch with the specified URL scheme.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+For iOS, you can test it from the shell as follows:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+xcrun simctl openurl booted "something://"
+```
+
+
+----
+
+
+Third Party Appとの連携をする際に動作をシミュレートするためのアプリです
+
+setup.rbのURL_SCHEMESに好きな値を設定して以下のように実行します。
+
+```sh
+ruby setup.rb
+```
+
+これでビルドすると、指定したURLスキームでアプリが起動するようになります。
+
+iOSの場合はシェルから以下のようにすると試せます。
+
+```sh
+xcrun simctl openurl booted "something://"
+```
+
